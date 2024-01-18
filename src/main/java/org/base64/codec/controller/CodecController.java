@@ -1,6 +1,7 @@
 package org.base64.codec.controller;
 
 import org.apache.tomcat.util.codec.binary.Base64;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,15 +13,22 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 @RequestMapping("/")
 public class CodecController {
+    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(CodecController.class);
     @RequestMapping(method = RequestMethod.GET, path = "/")
     public String getDeviceDetails(/* String encodedString*/ HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
-       // System.out.println(encodedString);
         return "encodedecode";
     }
     @ResponseBody
     @RequestMapping(method = RequestMethod.GET, path = "/getDecodedString")
     public String getDecodedString( String encodedString, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
-        String decodedValue = new String(Base64.decodeBase64(encodedString));
+        String decodedValue ="";
+        try {
+            decodedValue = new String(Base64.decodeBase64(encodedString));
+        }
+        catch(Exception e){
+        LOGGER.error("error "+e.getMessage());
+            decodedValue="invalid input";
+        }
         return decodedValue;
     }
 }
