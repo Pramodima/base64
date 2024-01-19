@@ -24,6 +24,7 @@ public class CodecController {
         String decodedValue ="";
         try {
             decodedValue = new String(Base64.decodeBase64(encodedString));
+
         }
         catch(Exception e){
         LOGGER.error("error "+e.getMessage());

@@ -3,23 +3,19 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 
-	<style>
-#configTable tbody tr td:nth-child(3n) {word-break: break-all;}
-table.table-bordered tbody th, table.table-bordered tbody td {word-wrap: break-word;word-break: break-all !important;width: 20% !important;}
-table.table-bordered tbody th, table.table-bordered tbody td:nth-child(1) {width: 3% !important;}
-#configTable tbody{background-color: #f5f5f5 !important;}
-</style>
+
+  <style>body{background-color:#1aa7ec;button { width: 170px;height: 50px;font-size: 20px;}</style>
+
 <div class="page-content-wrapper">
 	<div class="page-content">
 		<div class="page-head">
 			<!-- BEGIN PAGE TITLE -->
 			<div class="page-title">
-				<h3>Doceree Cache</h3>
+				<h3>Base 64 Decoder</h3>
 			</div>
 			<!-- END PAGE TITLE -->
 		</div>
 		<!-- END PAGE HEAD -->
-		<!-- BEGIN PAGE BREADCRUMB -->
 
 		<div class="portlet default no-space">
 					<div class="portlet-body">
@@ -57,8 +53,8 @@ $("#rdesc").value='';
       $("#rdesc").val(html);
     },
     error: function (data) {
-                alert('error');
-            }
+
+    }
   });
 }
 }
