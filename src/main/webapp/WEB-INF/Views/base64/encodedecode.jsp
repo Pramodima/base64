@@ -4,7 +4,7 @@
 
 
 
-  <style>body{background-color:#1aa7ec;button { width: 170px;height: 50px;font-size: 20px;}</style>
+  <style>body{background-color:#1aa7ec;button { width: 170px;height: 50px;font-size: 20px}</style>
 
 <div class="page-content-wrapper">
 	<div class="page-content">
