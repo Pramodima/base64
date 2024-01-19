@@ -28,7 +28,8 @@ table.table-bordered tbody th, table.table-bordered tbody td:nth-child(1) {width
 										<div class="btn-group">
 
 										<textarea name="input" id="encoded" placeholder="Type (or paste) here..." spellcheck="false" rows="20" cols="100"></textarea>
-										<a href="#" style="float:left;" id="clickAction" onclick="clickActions()">Click to decode</a>
+
+										<div style="float: center;padding: 17px;color: #000;position: relative;"><button type="submit" style="float:center;" id="clickAction" onclick="clickActions()">Click to decode</a></div>
 										</div>
 								</div>
 
@@ -44,15 +45,16 @@ table.table-bordered tbody th, table.table-bordered tbody td:nth-child(1) {width
     </div>
 <script type="text/javascript">
 var clickActions = function() {
+$("#rdesc").value='';
  var encodedStr = document.getElementById('encoded').value;
- alert("Put a message here."+encodedStr);
   if(encodedStr!=''){
   $.ajax({
     url: "/getDecodedString",
            data : "encodedString="+encodedStr,
     cache: false,
     success: function(html){
-      $("#rdesc").append(html);
+
+      $("#rdesc").val(html);
     },
     error: function (data) {
                 alert('error');
