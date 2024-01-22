@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.base64</groupId>
-	<artifactId>codec</artifactId>
+	<artifactId>base64</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>codec</name>
+	<name>base64</name>
 	<description>Base64 encode decode</description>
 	<packaging>war</packaging>
 	<properties>
