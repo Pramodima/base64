@@ -44,8 +44,9 @@
 <script type="text/javascript">
 var clickActions = function() {
 $("#rdesc").value='';
+
  var decodedStr = document.getElementById('decoded').value;
-  if(encodedStr!=''){
+  if(decodedStr!=''){
   $.ajax({
     url: "/getEncodedString",
            data : "decodedString="+decodedStr,
