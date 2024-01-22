@@ -32,4 +32,22 @@ public class CodecController {
         }
         return decodedValue;
     }
+    @RequestMapping(method = RequestMethod.GET, path = "/encode")
+    public String encode( HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+        return "encode";
+    }
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.GET, path = "/getEncodedString")
+    public String getEncodedString( String decodedString, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+        String encodedValue ="";
+        try {
+            encodedValue = new String(Base64.encodeBase64(decodedString.getBytes()));
+
+        }
+        catch(Exception e){
+            LOGGER.error("error "+e.getMessage());
+            encodedValue="invalid input";
+        }
+        return encodedValue;
+    }
 }

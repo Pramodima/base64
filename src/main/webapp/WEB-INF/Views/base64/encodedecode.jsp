@@ -11,8 +11,10 @@
 		<div class="page-head">
 			<!-- BEGIN PAGE TITLE -->
 			<div class="page-title">
-				<h3>Base 64 Decoder</h3>
+				<h2>Base 64 Decoder</h2>
 			</div>
+			<a href="encode" class="active"><h3><a href="encode" rel="external"><i class="fas fa-folder"></i>Encode</a></h3>
+            <a href="/" class="active"><h3><a href="/" rel="external"><i class="fas fa-folder"></i>Decode</a></h3>
 			<!-- END PAGE TITLE -->
 		</div>
 		<!-- END PAGE HEAD -->
