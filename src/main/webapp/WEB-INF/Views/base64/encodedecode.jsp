@@ -2,8 +2,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
-
-
   <style>body{background-color:#1aa7ec;button { width: 170px;height: 50px;font-size: 20px}</style>
 
 <div class="page-content-wrapper">
