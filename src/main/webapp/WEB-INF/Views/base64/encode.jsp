@@ -49,7 +49,7 @@ $("#rdesc").value='';
   if(decodedStr!=''){
   $.ajax({
     url: "/getEncodedString",
-           data : "decodedString="+decodedStr,
+           data : "decodedString="+encodeURIComponent(decodedStr),
     cache: false,
     success: function(html){
 
