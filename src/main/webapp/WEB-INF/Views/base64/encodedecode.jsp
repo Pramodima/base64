@@ -1,10 +1,14 @@
+<!DOCTYPE html>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <head>
-  <style><%@include file="/WEB-INF/Views/css/base64.css"%></style>
+   <style><%@include file="/WEB-INF/Views/css/base64.css"%></style>
   <style>body{background-color:#1aa7ec;button { width: 170px;height: 50px;font-size: 20px}</style>
 </head>
+
+
 <div class="page-content-wrapper">
 	<div class="page-content">
 		<div class="page-head">
@@ -12,11 +16,9 @@
 			<div class="page-title">
 				<h2>Base 64 Decoder</h2>
 			</div>
-			<a href="encode"><button type="submit" class="btn btn-xs btn-outline btn-block"  ,title="Encoder">Encoder <i class="fa fa-print"></i></button></a>
-            <a href="/"><button type="submit" class="btn btn-xs btn-outline btn-block"  ,title="Decoder">Decoder <i class="fa fa-print"></i></button>
-            <br></br>
-			<!--<a href="encode" class="active"><h3><a href="encode" rel="external"><i class="fas fa-folder"></i>Encode</a></h3>
-            <a href="/" class="active"><h3><a href="/" rel="external"><i class="fas fa-folder"></i>Decode</a></h3> -->
+			<button  type="submit"  , onclick="window.location.href = 'encode'">Encoder </button>
+            <button  type="submit"  , onclick="window.location.href = '/'">Decoder </button>
+            <br><br></br></br>
 			<!-- END PAGE TITLE -->
 		</div>
 		<!-- END PAGE HEAD -->
