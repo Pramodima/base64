@@ -37,6 +37,11 @@ public class CodecController {
         return "encode";
     }
     @ResponseBody
+    @RequestMapping(method = RequestMethod.GET, path = "/health")
+    public String checkHealth( HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+        return "OK";
+    }
+    @ResponseBody
     @RequestMapping(method = RequestMethod.GET, path = "/getEncodedString")
     public String getEncodedString( String decodedString, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
         String encodedValue ="";

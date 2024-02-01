@@ -6,6 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
@@ -19,8 +20,9 @@ public class CodecApplication extends SpringBootServletInitializer {
 		return builder.sources(CodecApplication.class);
 	}
 	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		// Do any additional configuration here
-		return builder.build();
+	public RestTemplate restTemplate() {
+		SimpleClientHttpRequestFactory rf = new SimpleClientHttpRequestFactory();
+		rf.setBufferRequestBody(false);
+		return new RestTemplate(rf);
 	}
 }
