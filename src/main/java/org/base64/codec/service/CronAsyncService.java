@@ -1,3 +1,4 @@
+/*
 package org.base64.codec.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,15 @@ public class CronAsyncService {
 
 @Autowired
     RestTemplate restTemplate;
-    @Scheduled(cron = "0 3/14 * * * *")
+    @Scheduled(cron = "0 0/1 * * * *")
     public void reloadMetaData(){
-        restTemplate.getForObject("https://base64-b6xr.onrender.com/health", String.class);
+        try {
+            String ans = restTemplate.getForObject("https://base64-b6xr.onrender.com/health", String.class);
+            System.out.println(ans);        }
+        catch(Exception e){
+            e.printStackTrace();
+
+        }
     }
 }
+*/
