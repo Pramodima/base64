@@ -4,6 +4,26 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <head>
+ <meta charset="utf-8" />
+  <title>Base64 Decode and Encode - Online</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#5fa926" />
+  <meta name="description" content="Decode from Base64 format or encode into it . This site has an easy to use online tool/utility to encode/decode your data." />
+  <meta name="keywords" content="base64, decode, online, tool" />
+  <meta name="robots" content="index, follow" />
+   <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "https://base64-b6xr.onrender.com/",
+    "name": "Base64 Decode and Encode - Online",
+    "description": "Decode from Base64 format or encode into it . This site has an easy to use online tool/utility to encode/decode your data.",
+    "keywords": "base64, decode, online, decoder, encoder, util, tool ",
+    "inLanguage": "en",
+    "dateCreated": 2024,
+    "isAccessibleForFree": true
+  }
+  </script>
    <style><%@include file="/WEB-INF/Views/css/base64.css"%></style>
   <style>body{background-color:#1aa7ec;button { width: 170px;height: 50px;font-size: 20px}</style>
 </head>
