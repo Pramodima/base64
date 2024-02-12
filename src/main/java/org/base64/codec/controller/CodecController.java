@@ -1,6 +1,7 @@
 package org.base64.codec.controller;
 
 import org.apache.tomcat.util.codec.binary.Base64;
+import org.base64.codec.service.CronAsyncService;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,9 +14,16 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 @RequestMapping("/")
 public class CodecController {
+
+    static {
+        Thread th=new Thread(new CronAsyncService());
+        th.setName("healthCheckThread");
+        th.start();
+    }
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(CodecController.class);
     @RequestMapping(method = RequestMethod.GET, path = "/")
     public String getDeviceDetails(/* String encodedString*/ HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+
         return "encodedecode";
     }
     @ResponseBody
