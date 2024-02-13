@@ -4,7 +4,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE HTML>
 <head>
-<meta charset="utf-8" />
+ <meta charset="utf-8" />
   <title>Base64 Decode and Encode - Online</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#5fa926" />
@@ -23,9 +23,11 @@
     "dateCreated": 2024,
     "isAccessibleForFree": true
   }
-  <style><%@include file="/WEB-INF/Views/css/base64.css"%></style>
+  </script>
+   <style><%@include file="/WEB-INF/Views/css/base64.css"%></style>
   <style>body{background-color:#1aa7ec;button { width: 170px;height: 50px;font-size: 20px}</style>
 </head>
+
 <div class="page-content-wrapper">
 	<div class="page-content">
 		<div class="page-head">

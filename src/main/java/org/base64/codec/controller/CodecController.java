@@ -15,11 +15,11 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/")
 public class CodecController {
 
-    static {
+    /*static {
         Thread th=new Thread(new CronAsyncService());
         th.setName("healthCheckThread");
         th.start();
-    }
+    }*/
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(CodecController.class);
     @RequestMapping(method = RequestMethod.GET, path = "/")
     public String getDeviceDetails(/* String encodedString*/ HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
